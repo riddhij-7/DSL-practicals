@@ -1,4 +1,4 @@
-# Input the roll numbers of students who play different sports
+
 n = int(input("Enter the number of students who play cricket: "))
 cricket = []
 for i in range(n):
@@ -20,7 +20,7 @@ for i in range(n3):
     football.append(roll_no)
 print("The set of students who play football:", football)
 
-# Function to compute intersection of two lists
+
 def intersection(l1, l2):
     res = []
     for i in l1:
@@ -28,15 +28,14 @@ def intersection(l1, l2):
             res.append(i)
     return res
 
-# Function to compute union of two lists
-def union(l1, l2):
+
     res = l1[:]
     for i in l2:
         if i not in res:
             res.append(i)
     return res
 
-# Function to compute difference of two lists
+
 def diff(l1, l2):
     res = []
     for i in l1:
@@ -44,15 +43,15 @@ def diff(l1, l2):
             res.append(i)
     return res
 
-# a) List of students who play both cricket and badminton
+
 students_cricket_and_badminton = intersection(cricket, badminton)
 print("List of students who play both cricket and badminton:", students_cricket_and_badminton)
 
-# b) List of students who play either cricket or badminton but not both
+
 students_either_cricket_or_badminton = diff(cricket, badminton) + diff(badminton, cricket)
 print("List of students who play either cricket or badminton but not both:", students_either_cricket_or_badminton)
 
-# c) Number of students who play neither cricket nor badminton
+
 all_students = cricket[:]
 for i in badminton:
     if i not in all_students:
